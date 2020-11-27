@@ -1,0 +1,30 @@
+{
+  "name": "quora-clone",
+  "version": "1.0.0",
+  "description": "This is the backend to Quora Clone",
+  "main": "server.js",
+  "repository": "https://github.com/Ntshembo-Hlongwane1/Quora-Clone.git",
+  "author": "Ntshembo <juniorWebProjects@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node server.js",
+    "dev": "nodemon --exec babel-node server.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.23.0",
+    "connect-mongodb-session": "^2.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "formidable": "^1.2.2",
+    "mongoose": "^5.10.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

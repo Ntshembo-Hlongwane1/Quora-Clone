@@ -1,0 +1,66 @@
+.Header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.Header__left {
+  display: flex;
+  align-items: center;
+}
+
+.left__logo {
+  width: 20%;
+}
+
+.left__logoImage {
+  width: 100%;
+}
+
+.left__Home,
+.left__notifications {
+  display: flex;
+  align-items: center;
+}
+
+.left__notifications {
+  margin-left: 0.6em;
+}
+
+.current-location {
+  color: #b92b27;
+  border-bottom: 1px solid #b92b27;
+}
+
+.Header__center {
+  display: flex;
+  align-items: center;
+  margin-right: 25%;
+  border: 1px solid lightgray;
+}
+
+.Header__center:hover {
+  border: 1px solid blue;
+}
+
+.center__inputField {
+  border: none;
+}
+
+.Header__right {
+  display: flex;
+  align-items: center;
+}
+
+.right__user,
+.right__Icon,
+.right-btn {
+  margin-right: 1em;
+}
+
+.right-btn {
+  border-radius: 999px;
+  padding: 0.1em 2em;
+  background-color: #b92b27;
+  color: white;
+}
