@@ -129,6 +129,7 @@ class AuthController {
         request.session.user = {
           username: isUserExisting.username,
           id: isUserExisting._id,
+          profileImage: isUserExisting.profileImage,
         };
 
         response.status(200).send(request.sessionID);
@@ -137,6 +138,27 @@ class AuthController {
       return response
         .status(500)
         .json({ msg: "Server Error: Server currently down try again later" });
+    }
+  }
+
+  isLoggedIn(request, response) {
+    const userSession = request.session || false;
+
+    try {
+      if (userSession) {
+        return response
+          .status(200)
+          .json({
+            auth_status: true,
+            profileImage: userSession.user.profileImage,
+          });
+      }
+
+      return response.status(200).json({ auth_status: false });
+    } catch (error) {
+      return response.status(500, {
+        msg: "Server Error: Server currently down try again later",
+      });
     }
   }
 }

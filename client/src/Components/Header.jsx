@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
-import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
+
 import LanguageIcon from "@material-ui/icons/Language";
 import Avatar from "@material-ui/core/Avatar";
 import SearchIcon from "@material-ui/icons/Search";
 import Logo from "../images/logo.jpeg";
 import "../StyleSheet/Header.css";
-const Header = () => {
+const Header = ({ profile }) => {
   const location = window.location.href;
 
   return (
@@ -47,7 +45,7 @@ const Header = () => {
       </div>
       <div className="Header__right">
         <div className="right__user">
-          <Avatar src="" alt="User Profile" />
+          <Avatar src={profile} alt="User Profile" />
         </div>
         <LanguageIcon className="right__Icon" />
         <button className="right-btn">Add Question</button>

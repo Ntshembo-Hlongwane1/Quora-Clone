@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import expressSession from "express-session";
 import MongoStore from "connect-mongodb-session";
 import AuthRoute from "./Routes/AuthRoute/AuthRoute";
+import QuestionRoute from "./Routes/QuestionRoute/Question";
 dotenv.config();
 
 const app = express();
@@ -46,6 +47,7 @@ const mongoDB_connectionOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false,
 };
 mongoose.connect(mongoURI, mongoDB_connectionOptions, (error) => {
   if (error) {
@@ -57,6 +59,7 @@ mongoose.connect(mongoURI, mongoDB_connectionOptions, (error) => {
 
 //=========================================================Server EndPoints=============================================
 app.use(AuthRoute);
+app.use(QuestionRoute);
 
 //=========================================================Server Connection & Configs==================================
 const PORT = process.env.PORT || 5000;

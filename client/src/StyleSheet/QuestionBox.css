@@ -26,8 +26,19 @@
   margin-bottom: 2em;
   border: none;
   font-weight: 700;
+  flex: 1;
 }
 
 .QuestionBox__inputField::placeholder {
   font-weight: 700;
+}
+
+.QuestionBox__inputField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.QuestionBox__btn {
+  margin-bottom: 2em;
 }

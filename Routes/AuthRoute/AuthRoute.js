@@ -12,4 +12,8 @@ router.post("/api/user-signin", (request, response) => {
   AuthController.Login(request, response);
 });
 
+router.get("/api/isUserLoggedIn", (request, response) => {
+  AuthController.isLoggedIn(request, response);
+});
+
 export default router;
